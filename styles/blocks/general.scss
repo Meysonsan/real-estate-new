@@ -1,0 +1,43 @@
+body {
+    line-height: 1;
+    font-family: Manrope;
+    color: #333333;
+}
+.page {
+    flex: 1 1 auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.375;
+    &--center {
+        text-align: center;
+    }
+}
+[class*="#{$container-prefix}"] {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@include respond-max (lg) {
+    [class*="#{$container-prefix}"] {
+        max-width: 970px;
+    }
+}
+@include respond-max (md) {
+    [class*="#{$container-prefix}"] {
+        max-width: 750px;
+    }
+}
+@include respond-max (sm) {
+    [class*="#{$container-prefix}"] {
+        max-width: none;
+        padding: 0px 15px;
+    }
+}
